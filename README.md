@@ -2,6 +2,8 @@
 
 A Homebridge plugin for controlling RGB LED strips via serial connection (Arduino, Raspberry Pi, etc.).
 
+This plugin works with the Arduino sketch available at: [arduino-rgb-controller](https://github.com/whereayodev/arduino-rgb-controller)
+
 ## Installation
 
 ```bash
