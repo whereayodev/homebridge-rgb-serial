@@ -1,4 +1,64 @@
 {
-  "name": "homebridge-serial-rgb",
-  "packageManager": "yarn@4.4.1"
+  "name": "homebridge-rgb-serial",
+  "displayName": "Homebridge RGB Serial",
+  "version": "1.0.0",
+  "description": "Homebridge plugin for controlling RGB LED strips via Serial connection",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "watch": "npm run build && npm link && nodemon",
+    "lint": "eslint src/**.ts",
+    "clean": "rm -rf ./dist",
+    "prepublishOnly": "npm run lint && npm run clean && npm run build",
+    "start": "homebridge -D -I -U ./config",
+    "debug": "DEBUG=* homebridge -D -I -U ./config"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "rgb",
+    "led",
+    "serial",
+    "arduino",
+    "raspberry-pi",
+    "homekit"
+  ],
+  "author": {
+    "name": "Max Yo",
+    "email": "hello@whereayo.work",
+    "url": "https://github.com/whereayodev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/whereayodev/homebridge-serial-rgb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whereayodev/homebridge-serial-rgb/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "homebridge": ">=1.6.0"
+  },
+  "dependencies": {
+    "serialport": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/serialport": "^10.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "homebridge": "^1.9.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "nodemon": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "homepage": "https://github.com/whereayodev/homebridge-serial-rgb#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/whereayodev"
+  },
+  "license": "MIT"
 }

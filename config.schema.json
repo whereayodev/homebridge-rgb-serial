@@ -1,0 +1,40 @@
+{
+  "pluginAlias": "RGBSerial",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "default": "RGB Light",
+        "description": "Name of RGB Light"
+      },
+      "port": {
+        "type": "string",
+        "default": "/dev/ttyUSB0",
+        "description": "Serial port path"
+      },
+      "baudRate": {
+        "type": "number",
+        "enum": [9600, 115200],
+        "default": 115200,
+        "description": "Serial port Baud Rate"
+      },
+      "debounceMs": {
+        "type": "number",
+        "default": 20,
+        "description": "Delay of color update (ms)"
+      },
+      "colorTempMin": {
+        "type": "number",
+        "default": 140,
+        "description": "Min color temperature (K)"
+      },
+      "colorTempMax": {
+        "type": "number",
+        "default": 500,
+        "description": "Max color temperature (K)"
+      }
+    },
+    "required": ["name", "port"]
+  }
+}
