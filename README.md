@@ -49,17 +49,9 @@ The plugin sends the following commands through the serial port:
 - Color setting: `rgb R,G,B` (where R,G,B are values from 0 to 255)
 
 ## Arduino Wiring Diagram
+More information at [Arduino sketch repo](https://github.com/whereayodev/arduino-rgb-controller?tab=readme-ov-file#hardware-setup)
+![Connection Scheme](https://github.com/user-attachments/assets/54106e06-6786-4614-bd6f-49b916b5218b)
 
-```
-           Arduino
-    +------------------+
-    |                  |
-    | D5 -----> R LED |
-    | D6 -----> G LED |
-    | D7 -----> B LED |
-    |                  |
-    +------------------+
-```
 
 ## Requirements
 
